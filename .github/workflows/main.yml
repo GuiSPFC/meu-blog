@@ -29,6 +29,9 @@ jobs:
     - name: Rodar testes
       run: npm run test
 
+    - name: Instalar Vercel CLI globalmente no Servidor
+      run: npm install -g vercel
+
     - name: Pull Vercel Environment Information
       run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
       env:
